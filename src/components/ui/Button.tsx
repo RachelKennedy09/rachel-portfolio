@@ -19,7 +19,8 @@ export default function Button({
   const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
     primary: "bg-[var(--alpine-glacier)] text-slate-900 hover:opacity-90",
     light: "bg-white/70 text-slate-900 hover:bg-white",
-    dark: "bg-slate-900 text-white hover:bg-slate-950",
+    dark: "!bg-slate-900 !text-white hover:!bg-slate-950",
+
   };
 
   return (
