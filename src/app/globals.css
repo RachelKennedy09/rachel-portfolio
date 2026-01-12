@@ -2,11 +2,23 @@
 @import "tailwindcss";
 
 :root {
+
+    --flow-start: rgba(15, 60, 64, 0.55); /* top of teal fade behind About */
+  --flow-mid: rgba(79, 163, 196, 0.22);
+  --flow-end: rgba(143, 189, 181, 0.35);
+
   /* Fonts are injected by next/font in layout.tsx */
   --font-heading: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --font-body: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
     "Noto Sans", "Liberation Sans", sans-serif;
+    
+  --page-teal: #8fbdb5;        /* main background */
+  --paper: #f7f8f7;            /* card background */
+  --ink: #12333a;              /* main text */
+  --muted: rgba(18, 51, 58, 0.75);
+  --pill: #ffffff;             /* pill background */
+
 
   /* Alpine Blues */
   --alpine-deep: #1a4d6e;
@@ -46,11 +58,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--snowfall);
+  background: var(--page-teal);
   color: var(--onyx);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* ---------- Default typography ---------- */
 h1,

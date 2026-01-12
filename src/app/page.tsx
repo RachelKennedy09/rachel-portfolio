@@ -1,10 +1,28 @@
+import HeroSection from "@/sections/HeroSection";
+import AboutSection from "@/sections/AboutSection";
+import ProjectsSection from "@/sections/ProjectsSection";
+
 export default function Home() {
   return (
-     <main className="min-h-screen p-10">
-   <h1 className="text-red-500 text-6xl">
-  Hello, I’m Rachel
-</h1>
-    
+    <main>
+      {/* Hero stays separate */}
+      <div className="pointer-events-none">
+        <HeroSection />
+      </div>
+
+      {/* Gradient flow container */}
+  
+
+<div
+  className="relative"
+  style={{
+    background:
+      "linear-gradient(to bottom, var(--flow-start), var(--flow-mid), var(--flow-end))",
+  }}
+>
+  <AboutSection />
+  <ProjectsSection />
+</div>
     </main>
   );
 }
