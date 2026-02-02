@@ -12,8 +12,11 @@ export type FeaturedProject = {
   links: {
     live?: string;
     code?: string;
+    mobile?: string;
+    demo?: string;
   };
 };
+
 
 export type SelectedProject = {
   title: string;
@@ -26,18 +29,31 @@ export type SelectedProject = {
   };
 };
 
-export const featuredProject: FeaturedProject = {
+export const featuredProject = {
   title: "Rocky Mountain Tails",
   description:
-    "A full-stack dog-walking application built with React, Node.js, Express, and MongoDB. Features include user authentication, protected routes, a note-taking system, and a responsive UI designed for real-world use.",
-  tech: ["React", "Node.js", "Express", "MongoDB", "Authentication", "CRUD"],
-  imageSrc: "/images/projects/rmt-hero.png",
-  imageAlt: "Rocky Mountain Tails App Screenshot",
+    "A full-stack platform for a dog-walking business, featuring a server-rendered web app built with Node.js, Express, EJS, and MongoDB, plus a companion mobile app built with React Native (Expo). Includes session-based authentication, protected routes, and full CRUD workflows for managing daily walk reports.",
+  tech: [
+    "Node.js",
+    "Express",
+    "EJS",
+    "MongoDB",
+    "Sessions/Auth",
+    "CRUD",
+    "MVC",
+    "React Native (Expo)",
+  ],
+  imageSrc: "/RockyMountainTails-Screenshot.png",
+  imageAlt: "Rocky Mountain Tails full-stack platform screenshot",
   links: {
-    live: "#", 
-    code: "#", 
+    live: "https://rockymountaintails-fullstack.onrender.com",
+    code: "https://github.com/RachelKennedy09/RockyMountainTails",
+    mobile: "https://github.com/RachelKennedy09/RMT-Expo-Go-App",
   },
 };
+
+
+
 
 export const selectedProjects: SelectedProject[] = [
   {
@@ -51,8 +67,8 @@ export const selectedProjects: SelectedProject[] = [
     ],
     links: {
       details: "#", 
-      live: "#",
-      code: "#",
+      live: "https://guided-collective.netlify.app/",
+      code: "https://github.com/RachelKennedy09/Guided",
     },
   },
   {

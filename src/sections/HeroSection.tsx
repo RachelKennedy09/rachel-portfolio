@@ -66,14 +66,15 @@ export default function HeroSection() {
 
         <CloudBubble className="mt-6 w-full max-w-xl">
           <div className="space-y-2">
-            <p className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-lg font-semibold text-transparent">
-              Frontend Developer • React • Accessibility-Focused
+            <p className="text-lg font-semibold text-black">
+              Full Stack Developer • React / Next.js • Node / Express • MongoDB
             </p>
-            <p className="text-base leading-relaxed text-gray-800">
-              I build fast, accessible, and visually thoughtful web experiences
-              from my home in Lake Louise, Alberta. My work blends clean
-              engineering with intentional, nature-inspired design.
-            </p>
+
+          <p className="text-base leading-relaxed text-gray-800">
+  I build fast, accessible web apps and APIs from my home in Lake Louise, Alberta—blending
+  clean engineering with intentional, nature-inspired design.
+</p>
+
           </div>
         </CloudBubble>
 
@@ -117,7 +118,15 @@ export default function HeroSection() {
             >
               LinkedIn
             </a>
-            <a href="mailto:rachelkennedydev@live.ca" className="hover:text-gray-600">
+            <a
+              href="https://www.credly.com/badges/6413caf3-21c0-41f4-854e-032a633e1e9e/public_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-600"
+            >
+              Software Developer Badge
+            </a>
+            <a href="mailto:rachelkennedy@live.ca" className="hover:text-gray-600">
               Email
             </a>
           </div>

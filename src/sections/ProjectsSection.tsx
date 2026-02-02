@@ -10,14 +10,16 @@ function Pill({ label }: { label: string }) {
     </span>
   );
 }
-
 export default function ProjectsSection() {
   return (
     <section id="projects" className="mx-auto w-full max-w-6xl px-6 py-16">
       {/* Featured */}
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
+        {/* LEFT — Text */}
         <div>
-          <p className="text-sm font-semibold text-slate-700/80">Featured Project</p>
+          <p className="text-sm font-semibold text-slate-700/80">
+            Featured Project
+          </p>
 
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900">
             {featuredProject.title}
@@ -32,26 +34,34 @@ export default function ProjectsSection() {
               <Pill key={t} label={t} />
             ))}
           </div>
+<div className="mt-7 flex flex-wrap gap-3">
+  {featuredProject.links.live && (
+    <Button href={featuredProject.links.live} variant="primary">
+      View Live Site
+    </Button>
+  )}
+  {featuredProject.links.code && (
+    <Button href={featuredProject.links.code} variant="dark">
+      View Web Code
+    </Button>
+  )}
+  {featuredProject.links.mobile && (
+    <Button href={featuredProject.links.mobile} variant="light">
+      View Mobile App
+    </Button>
+  )}
+</div>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            {featuredProject.links.live && (
-              <Button href={featuredProject.links.live} variant="primary">
-                View Live Site
-              </Button>
-            )}
-            {featuredProject.links.code && (
-              <Button href={featuredProject.links.code} variant="dark">
-                View Code
-              </Button>
-            )}
-          </div>
+
         </div>
 
-        {/* Placeholder screenshot */}
-        <div className="rounded-3xl bg-white/60 p-3 ring-1 ring-black/5 shadow-sm">
-          <div className="flex aspect-[16/9] items-center justify-center rounded-2xl bg-slate-200/60 text-sm text-slate-500">
-            Project screenshot coming soon
-          </div>
+        {/* RIGHT — Screenshot */}
+        <div className="relative">
+          <img
+            src={featuredProject.imageSrc}
+            alt={featuredProject.imageAlt}
+            className="w-full rounded-xl shadow-lg ring-1 ring-black/5"
+          />
         </div>
       </div>
 
@@ -66,7 +76,9 @@ export default function ProjectsSection() {
               className="rounded-3xl bg-white/70 p-7 ring-1 ring-black/5 shadow-sm"
             >
               <div className="flex items-start justify-between gap-4">
-                <h4 className="text-base font-semibold text-slate-900">{p.title}</h4>
+                <h4 className="text-base font-semibold text-slate-900">
+                  {p.title}
+                </h4>
 
                 {p.links.details && (
                   <a
